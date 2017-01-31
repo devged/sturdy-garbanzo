@@ -14,8 +14,8 @@ default: &default
   encoding: utf8
   reconnect: false
   pool: 5
-  username: fm
-  password: fm
+  username: sturdy-garbanzo
+  password: password
   host: localhost
   # socket: /Applications/MAMP/tmp/mysql/mysql.sock
 
@@ -23,7 +23,7 @@ development:
   <<: *default
   username: root
   password: student
-  database: fm_development
+  database: sturdy-garbanzo_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -53,6 +53,6 @@ development:
 #
 production:
   <<: *default
-  database: fm_production
-  username: fm
-  password:  #<%= ENV['PRODUCT_HUNT_DATABASE_PASSWORD'] %>
+  database: sturdy-garbanzo_production
+  username: sturdy-garbanzo
+  password: password
