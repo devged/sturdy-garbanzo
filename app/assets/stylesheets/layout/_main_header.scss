@@ -1,0 +1,48 @@
+@include bem-block(main-header) {
+  color: $nobel;
+  z-index: 3;
+
+  @include bem-element(wrapper) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include breakpoint(small) {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+
+  @include bem-element(right) {
+    @include breakpoint(small) {
+      flex-grow: 1;
+    }
+  }
+
+  @include bem-element(logo) {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: asset-url('advantage_logo.jpg') no-repeat;
+    margin: 0;
+    background-size: 200px 45px;
+    width: 200px;
+    height: 45px;
+    display: block;
+    @include breakpoint(extra-small) {
+      background-size: auto 75px;
+      width: 110px;
+      height: 75px;
+    }
+  }
+
+  @include bem-element(nav) {
+    padding-left: 50px;
+    text-transform: uppercase;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+}

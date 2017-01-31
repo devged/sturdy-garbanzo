@@ -1,0 +1,32 @@
+<%= form_for(attdatum) do |f| %>
+  <% if attdatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(attdatum.errors.count, "error") %> prohibited this attdatum from being saved:</h2>
+
+      <ul>
+      <% attdatum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :personnel_id %>
+    <%= f.text_field :personnel_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :season_id %>
+    <%= f.text_field :season_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rateable_id %>
+    <%= f.text_field :rateable_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

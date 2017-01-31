@@ -1,0 +1,2 @@
+module RateablesHelper
+end

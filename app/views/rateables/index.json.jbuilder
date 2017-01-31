@@ -1,0 +1,1 @@
+json.array! @rateables, partial: 'rateables/rateable', as: :rateable

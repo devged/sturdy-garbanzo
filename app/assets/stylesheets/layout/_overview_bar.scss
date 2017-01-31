@@ -1,0 +1,132 @@
+$overview-bar-height: 40px;
+
+@include bem-block(overview-bar) {
+  border-radius: 5px;
+  background: white;
+  margin-bottom: 20px;
+
+  @include bem-element(top) {
+    padding: 20px;
+  }
+
+  @include bem-element(title) {
+    margin: 0;
+  }
+
+  @include bem-element(actions) {
+    margin-top: 10px;
+  }
+  @include bem-element(action) {
+    margin-right: 20px;
+  }
+
+  @include bem-element(smallprint){
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  @include bem-element(statistic) {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+    color: $chalice;
+    text-transform: uppercase;
+  }
+
+  @include bem-element(nav) {
+    height: $overview-bar-height;
+    display: flex;
+    position: relative;
+    background: $theme-color-complimentary;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    // Wanted to put overflow hidden here to ensure that we keep the border radius
+    // Cant do that as it means the 'more' popup gets hidden
+  }
+
+  // Tabs
+  @include bem-element(tabs) {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #FFF;
+  }
+
+  @include bem-element(tab) {
+    float: left;
+    position: relative;
+  }
+
+  // Bit hacky as we're basically not caring about the last item in the tabs
+  // But we need this to ensure that the border radius is adhered to
+  @include bem-element(tab, $pseudo-class: first-child) {
+    border-bottom-left-radius: 5px;
+
+    .overview-bar__tab-link {
+      border-bottom-left-radius: 5px;
+    }
+  }
+
+  @include bem-element(tab-link) {
+
+    // These three rules needed in case we're styling a button or something
+    background: inherit;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+
+    display: inline-block;
+    padding: 0px 30px;
+    line-height: $overview-bar-height;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: all 0.1s ease-in-out;
+  }
+
+  @include bem-element(tab-more) {
+    width: 220px;
+
+    .overview-bar__tab-link {
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+
+  @include bem-element(tab-more-popup) {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background: $theme-color-complimentary;
+
+    .overview-bar__tab {
+      float: none;
+      display: block;
+    }
+    .overview-bar__tab-link {
+      display: block;
+    }
+  }
+
+  @include bem-element(tab-more-icon) {
+    float: right;
+    font-weight: 600;
+    line-height: $overview-bar-height;
+    font-size: 2.0rem;
+  }
+
+  @include bem-element(tab-more, $modifier: active) {
+    background: darken($theme-color-complimentary, 10%);
+  }
+
+  @include bem-element(tab-link, $pseudo-class: hover) {
+    background: darken($theme-color-complimentary, 10%);
+  }
+
+  @include bem-element(tab-link, $modifier: active) {
+    background: darken($theme-color-complimentary, 10%);
+  }
+
+}

@@ -1,0 +1,9 @@
+@include bem-block(main-footer) {
+  background-color: #FFF;
+  background: $charcoal;
+
+  @include bem-element(text) {
+    color: $alto;
+  }
+}
+

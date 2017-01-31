@@ -1,0 +1,37 @@
+<%= form_for(personnel) do |f| %>
+  <% if personnel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(personnel.errors.count, "error") %> prohibited this personnel from being saved:</h2>
+
+      <ul>personnel.DOB 
+      <% personnel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :position_id %>
+    <%= f.collection_select(:position_id, Position.all, :id, :position) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :DOB %>
+    <%= f.date_field :DOB %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

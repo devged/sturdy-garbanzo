@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  personnel: one
+  season: one
+  rateable: one
+
+two:
+  personnel: two
+  season: two
+  rateable: two

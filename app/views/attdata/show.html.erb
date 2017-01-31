@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Personnel:</strong>
+  <%= @attdatum.personnel %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @attdatum.season %>
+</p>
+
+<p>
+  <strong>Rateable:</strong>
+  <%= @attdatum.rateable %>
+</p>
+
+<%= link_to 'Edit', edit_attdatum_path(@attdatum) %> |
+<%= link_to 'Back', attdata_path %>

@@ -1,0 +1,27 @@
+<%= form_for(rateable) do |f| %>
+  <% if rateable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rateable.errors.count, "error") %> prohibited this rateable from being saved:</h2>
+
+      <ul>
+      <% rateable.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rateable %>
+    <%= f.text_field :rateable %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

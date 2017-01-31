@@ -1,0 +1,46 @@
+@include bem-block(alert) {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-weight: 400;
+
+  @include bem-element(list) {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  @include bem-element(title) {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  @include bem-element(text, $pseudo-class: last-of-type) {
+    margin-bottom: 0;
+  }
+}
+
+// Success
+@include bem-block(alert, $modifier: success) {
+  color: $alert-green-text;
+  background-color: $alert-green-background;
+}
+
+// Info
+@include bem-block(alert, $modifier: info) {
+  color: $alert-blue-text;
+  background-color: $alert-blue-background;
+}
+
+// Warning
+@include bem-block(alert, $modifier: warning) {
+  color: $alert-orange-text;
+  background-color: $alert-orange-background;
+}
+
+// Error
+@include bem-block(alert, $modifier: error) {
+  color: $alert-red-text;
+  background-color: $alert-red-background;
+}

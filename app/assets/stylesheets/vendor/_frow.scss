@@ -1,0 +1,291 @@
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Small screen / tablet
+$sizes-mobile: (
+    xxs: 300px,
+    xs: 540px,
+    sm: 768px
+) !default;
+
+// Desktops / laptops
+$sizes-desktop: (
+    md: 980px,
+    lg: 1200px
+) !default;
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of max columns in the grid.
+$grid-max-columns: 12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 20px !default;
+
+
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+// Centered container element
+.frow-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+}
+@media (min-width: 768px) {
+    .frow-container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .frow-container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .frow-container {
+        width: 1170px;
+    }
+}
+
+// Flexible row
+//
+// Flexible rows contain your columns.
+
+@include bem-block(frow) {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+@include bem-block(frow, $modifier: gutters) {
+    margin-left: -$grid-gutter-width / 2;
+    margin-right: -$grid-gutter-width / 2;
+
+    &>* {
+        padding-left: $grid-gutter-width / 2;
+        padding-right: $grid-gutter-width / 2;
+    }
+}
+
+@include bem-block(frow, $modifier: double-gutters) {
+    margin-left: -$grid-gutter-width;
+    margin-right: -$grid-gutter-width;
+
+    &>* {
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+    }
+}
+
+@include bem-block(frow, $modifier: vertical-gutters) {
+    margin-top: -$grid-gutter-width / 2;
+    margin-bottom: -$grid-gutter-width / 2;
+
+    &>* {
+        padding-top: $grid-gutter-width / 2;
+        padding-bottom: $grid-gutter-width / 2;
+    }
+}
+
+@include bem-block(frow, $modifier: vertical-double-gutters) {
+    margin-top: -$grid-gutter-width;
+    margin-bottom: -$grid-gutter-width;
+
+    &>* {
+        padding-top: $grid-gutter-width;
+        padding-bottom: $grid-gutter-width;
+    }
+}
+
+@include bem-block(frow, $modifier: spaced) {
+  margin-bottom: 20px;
+}
+
+@include bem-block(frow, $modifier: centered) {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+@include bem-block(frow, $modifier: centered-column) {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+@include bem-block(frow, $modifier: row-start) {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+@include bem-block(frow, $modifier: row-center) {
+    flex-direction: row;
+    justify-content: center;
+}
+@include bem-block(frow, $modifier: row-end) {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+@include bem-block(frow, $modifier: column-start) {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+@include bem-block(frow, $modifier: column-center) {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+@include bem-block(frow, $modifier: column-end) {
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-start;
+}
+
+// Wrap
+@include bem-block(frow, $modifier: wrap) {
+    flex-wrap: wrap;
+}
+@include bem-block(frow, $modifier: wrap-reverse) {
+    flex-wrap: wrap-reverse;;
+}
+@include bem-block(frow, $modifier: nowrap) {
+    flex-wrap: nowrap;
+}
+
+// Flex-direction
+@include bem-block(frow, $modifier: direction-row) {
+    flex-direction: row;
+}
+@include bem-block(frow, $modifier: direction-reverse) {
+    flex-direction: row-reverse;
+}
+@include bem-block(frow, $modifier: direction-column) {
+    flex-direction: column;
+}
+@include bem-block(frow, $modifier: direction-column-reverse) {
+    flex-direction: column-reverse;
+}
+
+// Justify-content
+@include bem-block(frow, $modifier: justify-start) {
+    justify-content: flex-start;
+}
+@include bem-block(frow, $modifier: justify-end) {
+    justify-content: flex-end;
+}
+@include bem-block(frow, $modifier: justify-center) {
+    justify-content: center;
+}
+@include bem-block(frow, $modifier: justify-between) {
+    justify-content: space-between;
+}
+@include bem-block(frow, $modifier: justify-around) {
+    justify-content: space-around;
+}
+
+// Align-items
+@include bem-block(frow, $modifier: items-start) {
+    align-items: flex-start;
+}
+@include bem-block(frow, $modifier: items-end) {
+    align-items: flex-end;
+}
+@include bem-block(frow, $modifier: items-center) {
+    align-items: center;
+}
+@include bem-block(frow, $modifier: items-stretch) {
+    align-items: stretch;
+}
+@include bem-block(frow, $modifier: items-baseline) {
+    align-items: baseline;
+}
+
+// Align-content
+@include bem-block(frow, $modifier: content-start) {
+    align-content: flex-start;
+}
+@include bem-block(frow, $modifier: content-end) {
+    align-content: flex-end;
+}
+@include bem-block(frow, $modifier: content-center) {
+    align-content: center;
+}
+@include bem-block(frow, $modifier: content-between) {
+    align-content: space-between;;
+}
+@include bem-block(frow, $modifier: content-around) {
+    align-content: space-around;
+}
+
+// Columns
+//
+// Generate the various columns widths.
+
+$sizes: map-merge($sizes-mobile, $sizes-desktop);
+$sizes-names: map-keys($sizes);
+
+$all-columns: ();
+@for $denominator from 1 through $grid-max-columns {
+    @for $numerator from 1 through $denominator {
+      @each $size in $sizes-names {
+        $all-columns: append($all-columns,
+            '.col-#{$size}-#{$numerator}-#{$denominator}',
+                comma);
+        }
+    }
+}
+#{$all-columns} {
+    width:100%;
+}
+
+@each $size in $sizes-names {
+    @media (min-width: map-get($sizes, $size)) {
+        @for $denominator from 1 through $grid-max-columns {
+            @for $numerator from 1 through $denominator {
+                .col-#{$size}-#{$numerator}-#{$denominator} {
+                    width: percentage($numerator/$denominator);
+                }
+            }
+        }
+    }
+}
+
+// Adds gutters to rows and keeps gutters if it switches to columns
+@for $num from 1 through 3 {
+
+    $str: 'gutters';
+    @if $num > 1 {
+        $str: 'gutters-#{$num}x';
+    }
+
+    @include bem-block(frow, $modifier: $str) {
+        margin-left: -($grid-gutter-width * $num) / 2;
+        margin-right: -($grid-gutter-width * $num) / 2;
+
+        &>* {
+            padding-left: ($grid-gutter-width * $num) / 2;
+            padding-right: ($grid-gutter-width * $num) / 2;
+        }
+
+        @each $size in $sizes-names {
+            @media (max-width: map-get($sizes, $size)) {
+                @for $denominator from 1 through $grid-max-columns {
+                    @for $numerator from 1 through $denominator {
+                        .frow__col-#{$size}-#{$numerator}-#{$denominator}:not(:last-child) {
+                            margin-bottom: $grid-gutter-width * $num;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

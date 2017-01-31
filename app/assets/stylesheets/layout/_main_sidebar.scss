@@ -1,0 +1,49 @@
+@include bem-block(main-sidebar) {
+  padding: 0 0 40px;
+
+
+  @include bem-element(nav) {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include bem-element(nav-item) {
+
+  }
+
+  @include bem-element(nav-header) {
+    text-transform: uppercase;
+    margin: 20px 0 7px 0;
+    font-size: 1.4rem;
+    color: $chalice;
+    border-bottom: 1px solid $grey;
+    padding: 0 20px;
+    line-height: 1.8;
+  }
+
+  @include bem-element(nav-link) {
+    display: block;
+    color: $silver;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 6px 20px;
+  }
+
+  @include bem-element(nav-link, $modifier: active) {
+    color: #FFF;
+  }
+
+  @include bem-element(nav-link, $pseudo-class: hover) {
+    background: $grey;
+  }
+
+  @include bem-element(nav-counter) {
+    float: right;
+    margin-left: 5px;
+    color: $theme-color;
+    font-weight: bold;
+  }
+
+}

@@ -1,0 +1,8 @@
+@include bem-block(content-section) {
+
+}
+
+@include bem-block(content-section, $modifier: padded) {
+  padding: 40px 0;
+}
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: one
+  first_name: MyString
+  last_name: MyString
+  DOB: 2017-01-23 12:28:13
+
+two:
+  position: two
+  first_name: MyString
+  last_name: MyString
+  DOB: 2017-01-23 12:28:13

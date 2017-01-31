@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  personnel: one
+  start_date: 2017-01-23 12:28:58
+  end_date: 2017-01-23 12:28:58
+  wage: 9.99
+
+two:
+  personnel: two
+  start_date: 2017-01-23 12:28:58
+  end_date: 2017-01-23 12:28:58
+  wage: 9.99

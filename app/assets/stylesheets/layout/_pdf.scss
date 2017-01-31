@@ -1,0 +1,26 @@
+@include bem-block(pdf) {
+
+  @include bem-element(logo-wrap) {
+    text-align: right;
+  }
+
+  @include bem-element(logo) {
+    height: 50px;
+    display: inline-block;
+  }
+
+  @include bem-element(title) {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  @include bem-element(terms) {
+    font-size: 14px;
+  }
+
+  @include bem-element(footer) {
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+}

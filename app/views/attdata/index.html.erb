@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Attdata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Personnel</th>
+      <th>Season</th>
+      <th>Rateable</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attdata.each do |attdatum| %>
+      <tr>
+        <td><%= attdatum.personnel %></td>
+        <td><%= attdatum.season %></td>
+        <td><%= attdatum.rateable %></td>
+        <td><%= link_to 'Show', attdatum %></td>
+        <td><%= link_to 'Edit', edit_attdatum_path(attdatum) %></td>
+        <td><%= link_to 'Destroy', attdatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attdatum', new_attdatum_path %>

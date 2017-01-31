@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rateable: MyString
+  rating: 9.99
+
+two:
+  rateable: MyString
+  rating: 9.99

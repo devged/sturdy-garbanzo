@@ -1,0 +1,63 @@
+@include bem-block(button) {
+  background: $theme-color;
+  color: #FFF;
+  border: 2px solid transparent;
+  // border-radius: 3px;
+  padding: 10px 30px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.1s ease-in-out;
+  line-height: 1;
+  display: inline-block;
+
+  // Hacky hacky
+  margin: 0 10px 10px 0;
+}
+
+@include bem-block(button, $pseudo-class: visited) {
+  color: #FFF;
+}
+@include bem-block(button, $pseudo-class: hover) {
+  background: $theme-color-dark;
+}
+@include bem-block(button, $pseudo-class: active) {
+  outline: none;
+}
+@include bem-block(button, $pseudo-class: focus) {
+  outline: none;
+}
+
+@include bem-block(button, $modifier: slim) {
+  padding: 5px 10px;
+}
+
+@include bem-block(button, $modifier: full) {
+  width: 100%;
+  text-align: center;
+}
+
+// BLUE
+@include bem-block(button, $modifier: secondary) {
+  background: $theme-color-complimentary;
+}
+@include bem-block(button, $modifier: secondary, $pseudo-class: hover) {
+  background: darken($theme-color-complimentary, 10%);
+}
+
+// GREY
+@include bem-block(button, $modifier: tertiary) {
+  background: $nobel;
+}
+@include bem-block(button, $modifier: tertiary, $pseudo-class: hover) {
+  background: $grey;
+}
+
+// INVERTED
+@include bem-block(button, $modifier: inverted) {
+  background: transparent;
+  border: 2px solid #FFF;
+}
+@include bem-block(button, $modifier: inverted, $pseudo-class: hover) {
+  background: $theme-color-dark;
+}

@@ -1,0 +1,43 @@
+<header class="main-header js-main-header">
+
+  <div class="content-wrap content-wrap--padded">
+
+    <div class="main-header__wrapper">
+
+      <div class="main-header__left">
+        <%= link_to "Excess Protect", root_path, class: 'main-header__logo image_replacement' %>
+      </div>
+
+      <div class="main-header__right">
+        <nav>
+
+          <ul class="main-header__nav main-header-menu js-main-header-menu">
+
+              <li class="main-header-menu__item">
+                <%= link_to "Home", root_path, class: "main-header-menu__item-link" %>
+              </li>
+
+                <%= render 'layouts/buttons/attdata' %>
+                <%= render 'layouts/buttons/contract' %>
+                <%= render 'layouts/buttons/personnel' %>
+                <%= render 'layouts/buttons/user' %>
+                <%= render 'layouts/buttons/position' %>
+                <%= render 'layouts/buttons/rateable' %>
+                <%= render 'layouts/buttons/season' %>
+
+              <li class="main-header-menu__item">
+                <%= nav_link "Sign-out", destroy_user_session_path, method: :delete, class: "main-header-menu__item-link" %>
+              </li>
+
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>

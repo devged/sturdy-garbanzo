@@ -1,0 +1,51 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require trix
+ *= require dataTables/jquery.dataTables
+ *= require jquery-ui/datepicker
+ *= require_self
+ */
+
+ // Utilities
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/bem_mixins";
+
+// Vendor
+@import "vendor/datatables"; // Overriding some styles
+@import "vendor/frow"; // Flexbox Grid
+
+@import "base/core";
+@import "base/typography";
+
+@import 'layout/content';
+@import 'layout/content_section';
+@import 'layout/devise';
+@import 'layout/main_footer';
+@import 'layout/main_header';
+@import 'layout/main_header_menu';
+@import 'layout/main_nav';
+@import 'layout/main_sidebar';
+@import 'layout/overview_bar';
+@import 'layout/pdf';
+
+@import 'blocks/alert';
+@import 'blocks/buttons';
+@import 'blocks/form';
+@import 'blocks/table';
+
+@import 'modules/inputs';
+@import 'modules/links';
+@import 'modules/section_panel';
+@import 'modules/turbolinks';
+

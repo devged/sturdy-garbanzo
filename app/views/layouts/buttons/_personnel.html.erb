@@ -1,0 +1,5 @@
+<% if can? :read, Personnel %>
+  <li class="main-header-menu__item">
+    <%= link_to 'Personnels', personnels_path, class: "main-header-menu__item-link" %>
+  </li>
+<% end %>

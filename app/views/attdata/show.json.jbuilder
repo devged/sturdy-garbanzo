@@ -1,0 +1,1 @@
+json.partial! "attdata/attdatum", attdatum: @attdatum

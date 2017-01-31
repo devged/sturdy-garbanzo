@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &.decorated {
+    color: $theme-color-complimentary;
+    text-decoration: underline;
+  }
+
+}

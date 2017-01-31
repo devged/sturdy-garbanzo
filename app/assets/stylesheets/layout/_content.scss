@@ -1,0 +1,33 @@
+@include bem-block(content-wrap) {
+  @extend .group;
+  width: 100%;
+
+  @include breakpoint(large) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@include bem-block(content-wrap, $modifier: padded) {
+  padding: 15px;
+
+  @include breakpoint(medium) {
+    padding: 20px;
+  }
+  @include breakpoint(large) {
+    padding: 20px;
+  }
+}
+
+
+@include bem-block(content-wrap, $modifier: full) {
+
+  @include breakpoint(huge) {
+    width: 100%;
+  }
+}
+
+@include bem-block(content-wrap, $modifier: alert) {
+  padding-bottom: 0;
+}
+

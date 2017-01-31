@@ -1,0 +1,25 @@
+.dataTables_top {
+  @extend .group;
+  margin-bottom: 10px;
+}
+
+.dataTables_length {
+  select {
+    display: inline-block;
+    width: 70px;
+    padding: 5px;
+  }
+}
+
+.dataTables_filter {
+  input[type="search"] {
+    display: inline-block;
+    width: 225px;
+    padding: 5px;
+  }
+}
+
+.dataTables_bottom {
+  @extend .group;
+  margin-top: 10px;
+}

@@ -1,0 +1,58 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="month"],
+input[type="search"],
+input[type="number"],
+input[type="url"],
+input[type="file"],
+input[type="tel"],
+textarea,
+select {
+
+  width: 100%;
+  border: 2px solid $gainsboro;
+  -webkit-appearance: none !important; // Stops inset shadow (ie cropping of bottom border)
+  color: $grey;
+  border-radius: 1px;
+  padding: 8px 10px;
+  font-size: 1.6rem;
+
+  &.field-with-error {
+    background: $input-red-background;
+    border-color: $input-red-border;
+  }
+
+  &[readonly] {
+    background: $gainsboro;
+  }
+
+}
+
+textarea {
+  padding: 5px;
+  resize: none;
+}
+
+select {
+  // padding: 0 20px; // Needed so that select2 makes its boxes large enough to contain the input
+  option {
+    color: $grey;
+  }
+}
+
+@include bem-block(input){
+
+}
+
+@include bem-block(input, $modifier: full){
+  width: 100% !important;
+}
+@include bem-block(input, $modifier: half){
+  width: 50% !important;
+}
+@include bem-block(input, $modifier: spaced){
+  margin: 20px 0;
+}
+

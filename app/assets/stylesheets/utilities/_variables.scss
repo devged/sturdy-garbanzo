@@ -1,0 +1,51 @@
+/* --------------------------------------------------
+  Greys
+-------------------------------------------------- */
+$nero: #222;
+$gunmetal: #2D3339;
+$night-rider: #333;
+$charcoal: #444;
+$mortar: #555;
+$dim: #666;
+$grey: #777;
+$suva: #888;
+$nobel: #999;
+$chalice: #AAA;
+$silver: #BBB;
+$alto: #CCC;
+$gainsboro: #DDD;
+$smoke: #EEE;
+$white-smoke: #F6F6F6;
+$wild-sand: #F4F4F4;
+$alabaster: #FAFAFA;
+
+// Alert colors
+$alert-blue-background: #C2DFF4;
+$alert-blue-text: #418BA9;
+// $alert-blue-cross: #8AB9D1;
+
+$alert-green-background: #92C4A2;
+$alert-green-text: #285737;
+// $alert-green-cross: #5E9671;
+
+$alert-red-background: #E99C87;
+$alert-red-text: #47182B;
+// $alert-red-cross: #CB7B66;
+
+$alert-orange-background: #F4C371;
+$alert-orange-text: #91601F;
+// $alert-orange-cross: #CC9B50;
+
+// Errors on inputs
+$input-red-background: lighten(#E99C87, 25%);
+$input-red-border: darken(#E99C87, 15%);
+
+/* --------------------------------------------------
+  Theme
+-------------------------------------------------- */
+$theme-color: #b11e37;
+// $theme-color-light: #FFC800;
+$theme-color-light: lighten($theme-color, 30%);
+$theme-color-dark: darken($theme-color, 10%);
+$theme-color-complimentary: #00B221;
+

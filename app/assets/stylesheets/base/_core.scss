@@ -1,0 +1,35 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  height: 100%;
+
+  // For a flexbox sticky footer
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  main {
+    flex: 1;
+  }
+}
+
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.group:after {
+  display: table;
+  content: "";
+}
+
+.text-green {
+  color: $theme-color-complimentary;
+}
+.text-red {
+  color: $theme-color;
+}

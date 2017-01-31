@@ -1,0 +1,65 @@
+@include bem-block(table) {
+
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.4rem;
+
+  tr {
+    border-bottom: 1px solid $gainsboro;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 0.6em 0.6em;
+  }
+
+  .number {
+    text-align: right;
+  }
+}
+
+
+@include bem-block(table, $modifier: spaced){
+  margin-bottom: 20px;
+}
+@include bem-block(table, $modifier: compact){
+  th, td {
+    padding: 0.3em 0.6em;
+  }
+}
+
+@include bem-block(table, $modifier: align-center){
+  th,td {
+    text-align: center;
+  }
+}
+
+//-----------------------------------------------------------------------------
+// Datatables
+//-----------------------------------------------------------------------------
+@include bem-block(table, $modifier: data-table) {
+  border: 1px solid $gainsboro !important; // Overriding datatables specifity
+
+  tr {
+
+    &:nth-child(even) {
+      background: $white-smoke;
+    }
+    &:hover {
+      background: lighten($alert-blue-background, 10%);
+    }
+    &.clickable-row {
+      cursor: pointer;
+    }
+  }
+
+  th, td {
+    padding: 0.6em 0.6em;
+  }
+
+  th {
+    background: $smoke;
+    border-bottom: 2px solid $alto !important; // Overriding datatables specificity
+  }
+
+}

@@ -1,0 +1,30 @@
+@include bem-block(devise) {
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  background: rgba(white,0.95);
+
+  @include bem-element(title) {
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include bem-element(links) {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  @include bem-element(link) {
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: $theme-color;
+  }
+
+}

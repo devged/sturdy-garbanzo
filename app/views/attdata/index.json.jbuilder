@@ -1,0 +1,1 @@
+json.array! @attdata, partial: 'attdata/attdatum', as: :attdatum
